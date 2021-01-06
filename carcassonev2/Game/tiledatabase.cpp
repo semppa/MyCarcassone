@@ -43,7 +43,6 @@ TileDatabase::TileDatabase()
         {RIVER_STRAIGHT_ROAD, 1}
     };
 
-    /*
     mainPhase_ = {
         {MONASTERY, 4}, {ROAD_TO_MONASTERY, 2}, {ALL_CASTLE, 1}, {CASTLE_3_SIDES, 3}, {CASTLE_3_SIDES_SIGN, 1},
         {ROAD_TO_CASTLE, 1}, {ROAD_TO_CASTLE_SIGN, 2}, {CASTLE_ON_CORNER, 3}, {CASTLE_CORNER_SIGN, 2},
@@ -52,12 +51,6 @@ TileDatabase::TileDatabase()
         {CASTLE_CORNER_ROAD_R, 3}, {CASTLE_ROAD_CROSSING, 3}, {CASTLE_STRAIGHT_ROAD, 4}, {STRAIGHT_ROAD, 8},
         {CORNER_ROAD, 9}, {T_JUNKTION, 4}, {X_ROAD, 1},
     };
-    */
-
-    mainPhase_ = {
-        {MONASTERY, 1}, {CASTLE_STRAIGHT_ROAD, 2}, {T_JUNKTION, 2}
-    };
-
 
     allTilesByID_ = {
         {1, RIVER_START}, {2, STRAIGHT_RIVER}, {3, CORNER_RIVER},
