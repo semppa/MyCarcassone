@@ -50,6 +50,8 @@ private slots:
 
     void on_endTurnBtn_clicked();
 
+    void resetViewBtnClicked();
+
 signals:
     void closed();
 

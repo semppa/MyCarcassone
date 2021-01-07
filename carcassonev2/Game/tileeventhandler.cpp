@@ -543,7 +543,7 @@ void TileEventHandler::checkMonasteryReadiness(TileNode *from, std::vector<QPoin
     if(from->node_->getFig()->getLandtype() != monastery) {return;}
 
     figsToRemove.push_back(from->node_->getCoordinates());
-    sb.push_back({from->node_->getFig()->getOwner(),9});
+    sb.push_back({from->node_->getFig()->getOwner(), 9});
 }
 
 void TileEventHandler::changeFieldIndexes(TileNode *cur)

@@ -285,8 +285,8 @@ std::vector<TilePosition> TileDatabase::getTilePositions(TileID tileID)
     }
 
     case 22: {
-        TilePosition field1 = {0.37, 0, LandTypes::field, {0,1}}; // 2
-        TilePosition field2 = {0.38, 0.75, LandTypes::field, {2,1}}; // 3
+        TilePosition field1 = {0.37, 0.75, LandTypes::field, {0,1}}; // 2
+        TilePosition field2 = {0.38, 0, LandTypes::field, {2,1}}; // 3
         TilePosition castle = {0.375, 0.375, LandTypes::castle, {1,1}}; // 1
 
         retVect = {field1, field2, castle};

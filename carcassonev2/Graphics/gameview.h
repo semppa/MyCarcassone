@@ -50,7 +50,6 @@ private:
     TileEventHandler& tilehndlr_ = TileEventHandler::getInstance();
     std::shared_ptr<NetWorkController> netctrl_;
 
-    bool placed = false; // Flag to ensure you cant place 2 tiles by clicking fast
     bool mmbtn = false; // middlemousebutton
 
     bool tilePlaced = false;

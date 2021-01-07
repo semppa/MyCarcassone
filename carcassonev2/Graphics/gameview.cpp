@@ -10,6 +10,7 @@ GameView::GameView(QWidget *parent, GameScene* gamescene) : QGraphicsView(parent
     setVerticalScrollBarPolicy(Qt::ScrollBarAlwaysOff);
     setTransformationAnchor(QGraphicsView::NoAnchor);
     setFocus();
+    setMouseTracking(false);
 
     // tb = new TileDatabase();
 
@@ -43,6 +44,8 @@ void GameView::mouseMoveEvent(QMouseEvent *event)
         beginDragY = event->y();
         return;
     }
+
+    if(!datactrl_.myTurn()) { return;}
 
     if (!tilePlaced) {  // Nothing happens if mousetracking is off
         QPoint c = getWorldCoords(event->x(), event->y());

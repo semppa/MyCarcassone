@@ -13,6 +13,10 @@ GameWindow::GameWindow(QWidget *parent) :
     QGraphicsScene* scene = new QGraphicsScene(1,1,98,98);
     ui->tileView->setScene(scene);
 
+    QPushButton* resViewBtn = new QPushButton("Reset View", view_);
+    resViewBtn->setGeometry(5, view_->height()-35, 90, 30);
+    connect(resViewBtn, SIGNAL(clicked()), this, SLOT(resetViewBtnClicked()));
+
     connect(view_, SIGNAL(rotateTileView(int)), this, SLOT(rotateTileView(int)));
 
     setWindowTitle("Carcassone - Game Window");
@@ -134,7 +138,7 @@ void GameWindow::endGame()
 
     for(auto obj : scoreBoard) {
         if(winners.find(obj->playerPTR->getID()) != winners.end()) {
-            obj->nickLabel->setText("--WINNER-- " + obj->playerPTR->getNick() + " --WINNER--");
+            obj->nickLabel->setText("--WINNER-- " + obj->playerPTR->getNick());
         }
     }
 
@@ -154,6 +158,11 @@ void GameWindow::on_endTurnBtn_clicked()
         view_->endTurnCleanup(); // Cleaning up for example removing placeholder figures if one was not placed
         netctrl_->endTurn();
     }
+}
+
+void GameWindow::resetViewBtnClicked()
+{
+    view_->resetTransform();
 }
 
 void GameWindow::initializeScoreBoard()
