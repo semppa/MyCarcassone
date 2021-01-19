@@ -14,8 +14,8 @@ To play the game, follow the following steps
 - Extract the "build" directory to somewhere in your pc
 - Open "carcassone.exe"
 - Have fun!
-Some controls:
 
+Some controls:
 - Scrolling mousewheel will zoom in and out. If playing with no mouse (for example with laptop), Up and Down -keys can be used.
 - Moving screen can be done by either holding middle mouse button or right mouse button
 - Left and Right keys will turn the current tile.
